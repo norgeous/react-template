@@ -11,6 +11,9 @@ export class FlexGrid extends Component {
 	
 	FlexGrid attributes
 
+	child width				->		columns
+	spacing						->		gutter
+
 	flex-direction		->		direction
 	flex-wrap					->		wrap
 	justify-content		->		justify
@@ -32,17 +35,35 @@ export class FlexGrid extends Component {
 	render() {
 		console.log('FlexGrid.js render()')
 		let me = this
-
+		const { store,direction,wrap,justify,align,columns,gutter, ...rest } = me.props
 		return (
-			<div className={
+			<div
+			className={
 				'FlexGrid' +
 				me.propToCssName('direction') +
 				me.propToCssName('wrap') +
 				me.propToCssName('justify') +
 				me.propToCssName('align') +
 				me.propToCssName('columns')
-			}>
-				{me.props.children}
+			}
+			style={
+				{padding:'calc('+gutter+' / 2 )'}
+			}
+			{...rest}
+			>
+				{/*me.props.children*/}
+				{me.props.children && React.Children.map(me.props.children, child => {
+					
+					let twin_props = Object.assign({}, child.props)
+					//console.log('>>>>>>>>>>>>',child.props, twin_props)
+					
+					if(!twin_props.style) twin_props.style = {}
+					if(twin_props.columnspread) console.log("!")
+					twin_props.style.padding = 'calc('+gutter+' / 2 )'
+					
+					let twin = React.cloneElement(child, twin_props)
+					return twin
+				})}
 			</div>
 		)
 	}
@@ -61,17 +82,6 @@ export class FlexGrid extends Component {
 
 export class FlexItem extends Component {
 
-	/*
-	
-	FlexItem attributes
-
-	flex-direction		->		direction
-	flex-wrap					->		wrap
-	justify-content		->		justify
-	align-items				->		align
-	
-	*/
-
 	constructor(props) {
 		super(props);
 		this.store = this.props.store
@@ -86,15 +96,16 @@ export class FlexItem extends Component {
 	render() {
 		console.log('FlexItem.js render()')
 		let me = this
+		const { store,columnspread, ...rest } = me.props
 
 		return (
-			<div className={
+			<div
+			className={
 				'FlexItem' +
-				me.propToCssName('direction') +
-				me.propToCssName('wrap') +
-				me.propToCssName('justify') +
-				me.propToCssName('align')
-			}>
+				me.propToCssName('columnspread')
+			}
+			{...rest}
+			>
 				{me.props.children}
 			</div>
 		)

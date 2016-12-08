@@ -1,0 +1,68 @@
+.Popup {
+
+	.overlay {
+		
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(255,255,255,0.7);
+		
+		.bufferzone {
+
+			height: 100%;
+			padding: 40px;
+			box-sizing: border-box;
+
+			.popupbox {
+
+				margin: 0 auto;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				max-height: 100%;
+				box-sizing: border-box;
+				border: 20px solid black;
+				background: white;
+				display: flex;
+				flex-direction: column;
+
+				.heading {
+					position: absolute;
+					top: -30px;
+					width: 100%;
+					color: white;
+				}
+
+				.closepopup {
+					position: absolute;
+					top: -20px;
+					right: -20px;
+					padding: 2px;
+					width: 22px;
+					height: 22px;
+					display: block;
+				}
+
+				.scrollable {
+					overflow-y: auto;
+				}
+
+				.padded {
+					padding: 20px;
+				}
+
+				&.has-title {
+
+					border-top-width: 40px;
+
+					.closepopup {						
+						top: -30px;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+}
