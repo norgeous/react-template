@@ -1,0 +1,310 @@
+$grid_margin: 4px;
+$item_margin: 4px;
+
+
+/* bootrap media queries, Mobile First Method */
+
+/* all sizes */
+.FlexGrid {
+	background:yellow;
+	padding: $grid_margin;
+	display: flex;
+	flex-wrap: wrap;
+
+	&.direction-column {
+		flex-direction: column;
+	}
+	&.direction-row {
+		flex-direction: row;
+	}
+
+	&.justify-start {
+		justify-content: flex-start;
+	}
+	&.justify-end {
+		justify-content: flex-end;
+	}
+	&.justify-center {
+		justify-content: center;
+	}
+	&.justify-space-between {
+		justify-content: space-between;
+	}
+	&.justify-space-around {
+		justify-content: space-around;
+	}
+
+	& > div {
+		margin: $item_margin;
+		background: #222;
+		box-sizing: border-box;
+		transition: all .4s;
+	}
+	& > div > div {
+		margin: 8px;
+		background: #444;
+		color: white;
+		padding: 8px;
+	}
+
+	&.columns-1 > div {
+		width: calc(100% - (#{$item_margin} * 2));
+	}
+	&.columns-2 > div {
+		width: calc(50% - (#{$item_margin} * 2));
+	}
+	&.columns-3 > div {
+		width: calc(33.3333% - (#{$item_margin} * 2));
+	}
+	&.columns-4 > div {
+		width: calc(25% - (#{$item_margin} * 2));
+	}
+	&.columns-5 > div {
+		width: calc(20% - (#{$item_margin} * 2));
+	}
+	&.columns-6 > div {
+		width: calc(16.6666% - (#{$item_margin} * 2));
+	}
+
+}
+
+@media only screen and (min-width : 320px) {
+	/* xxs: Custom, iPhone Retina and above */ 
+	.FlexGrid {
+
+		&.direction-xxs-column {
+			flex-direction: column;
+		}
+		&.direction-xxs-row {
+			flex-direction: row;
+		}
+
+		&.justify-xxs-start {
+			justify-content: flex-start;
+		}
+		&.justify-xxs-end {
+			justify-content: flex-end;
+		}
+		&.justify-xxs-center {
+			justify-content: center;
+		}
+		&.justify-xxs-space-between {
+			justify-content: space-between;
+		}
+		&.justify-xxs-space-around {
+			justify-content: space-around;
+		}
+
+		&.columns-xxs-1 > div {
+			width: calc(100% - (#{$item_margin} * 2));
+		}
+		&.columns-xxs-2 > div {
+			width: calc(50% - (#{$item_margin} * 2));
+		}
+		&.columns-xxs-3 > div {
+			width: calc(33.3333% - (#{$item_margin} * 2));
+		}
+		&.columns-xxs-4 > div {
+			width: calc(25% - (#{$item_margin} * 2));
+		}
+		&.columns-xxs-5 > div {
+			width: calc(20% - (#{$item_margin} * 2));
+		}
+		&.columns-xxs-6 > div {
+			width: calc(16.6666% - (#{$item_margin} * 2));
+		}
+	
+	}
+}
+
+@media only screen and (min-width : 480px) {
+	/* xs: Extra Small Devices, Phones and above */ 
+	.FlexGrid {
+
+		&.direction-xs-column {
+			flex-direction: column;
+		}
+		&.direction-xs-row {
+			flex-direction: row;
+		}
+
+		&.justify-xs-start {
+			justify-content: flex-start;
+		}
+		&.justify-xs-end {
+			justify-content: flex-end;
+		}
+		&.justify-xs-center {
+			justify-content: center;
+		}
+		&.justify-xs-space-between {
+			justify-content: space-between;
+		}
+		&.justify-xs-space-around {
+			justify-content: space-around;
+		}
+
+		&.columns-xs-1 > div {
+			width: calc(100% - (#{$item_margin} * 2));
+		}
+		&.columns-xs-2 > div {
+			width: calc(50% - (#{$item_margin} * 2));
+		}
+		&.columns-xs-3 > div {
+			width: calc(33.3333% - (#{$item_margin} * 2));
+		}
+		&.columns-xs-4 > div {
+			width: calc(25% - (#{$item_margin} * 2));
+		}
+		&.columns-xs-5 > div {
+			width: calc(20% - (#{$item_margin} * 2));
+		}
+		&.columns-xs-6 > div {
+			width: calc(16.6666% - (#{$item_margin} * 2));
+		}
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	/* sm: Small Devices, Tablets and above */
+	.FlexGrid {
+
+		&.direction-sm-column {
+			flex-direction: column;
+		}
+		&.direction-sm-row {
+			flex-direction: row;
+		}
+
+		&.justify-sm-start {
+			justify-content: flex-start;
+		}
+		&.justify-sm-end {
+			justify-content: flex-end;
+		}
+		&.justify-sm-center {
+			justify-content: center;
+		}
+		&.justify-sm-space-between {
+			justify-content: space-between;
+		}
+		&.justify-sm-space-around {
+			justify-content: space-around;
+		}
+
+		&.columns-sm-1 > div {
+			width: calc(100% - (#{$item_margin} * 2));
+		}
+		&.columns-sm-2 > div {
+			width: calc(50% - (#{$item_margin} * 2));
+		}
+		&.columns-sm-3 > div {
+			width: calc(33.3333% - (#{$item_margin} * 2));
+		}
+		&.columns-sm-4 > div {
+			width: calc(25% - (#{$item_margin} * 2));
+		}
+		&.columns-sm-5 > div {
+			width: calc(20% - (#{$item_margin} * 2));
+		}
+		&.columns-sm-6 > div {
+			width: calc(16.6666% - (#{$item_margin} * 2));
+		}
+	}
+}
+
+@media only screen and (min-width : 992px) {
+	/* md: Medium Devices, Desktops and above */
+	.FlexGrid {
+
+		&.direction-md-column {
+			flex-direction: column;
+		}
+		&.direction-md-row {
+			flex-direction: row;
+		}
+
+		&.justify-md-start {
+			justify-content: flex-start;
+		}
+		&.justify-md-end {
+			justify-content: flex-end;
+		}
+		&.justify-md-center {
+			justify-content: center;
+		}
+		&.justify-md-space-between {
+			justify-content: space-between;
+		}
+		&.justify-md-space-around {
+			justify-content: space-around;
+		}
+
+		&.columns-md-1 > div {
+			width: calc(100% - (#{$item_margin} * 2));
+		}
+		&.columns-md-2 > div {
+			width: calc(50% - (#{$item_margin} * 2));
+		}
+		&.columns-md-3 > div {
+			width: calc(33.3333% - (#{$item_margin} * 2));
+		}
+		&.columns-md-4 > div {
+			width: calc(25% - (#{$item_margin} * 2));
+		}
+		&.columns-md-5 > div {
+			width: calc(20% - (#{$item_margin} * 2));
+		}
+		&.columns-md-6 > div {
+			width: calc(16.6666% - (#{$item_margin} * 2));
+		}
+	}
+}
+
+@media only screen and (min-width : 1200px) {
+	/* lg: Large Devices, Wide Screens and above */
+	.FlexGrid {
+
+		&.direction-lg-column {
+			flex-direction: column;
+		}
+		&.direction-lg-row {
+			flex-direction: row;
+		}
+
+		&.justify-lg-start {
+			justify-content: flex-start;
+		}
+		&.justify-lg-end {
+			justify-content: flex-end;
+		}
+		&.justify-lg-center {
+			justify-content: center;
+		}
+		&.justify-lg-space-between {
+			justify-content: space-between;
+		}
+		&.justify-lg-space-around {
+			justify-content: space-around;
+		}
+
+		&.columns-lg-1 > div {
+			width: calc(100% - (#{$item_margin} * 2));
+		}
+		&.columns-lg-2 > div {
+			width: calc(50% - (#{$item_margin} * 2));
+		}
+		&.columns-lg-3 > div {
+			width: calc(33.3333% - (#{$item_margin} * 2));
+		}
+		&.columns-lg-4 > div {
+			width: calc(25% - (#{$item_margin} * 2));
+		}
+		&.columns-lg-5 > div {
+			width: calc(20% - (#{$item_margin} * 2));
+		}
+		&.columns-lg-6 > div {
+			width: calc(16.6666% - (#{$item_margin} * 2));
+		}
+	}
+}

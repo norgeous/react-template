@@ -1,0 +1,36 @@
+$the_pink: olive;
+$the_red: cyan;
+
+//@import 'fonts/fonts';
+@import 'bootstrap-theme/bootstrap-import';
+
+/* utils */
+img.responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.responsive-container {
+	position: relative;
+	.responsive-breakout {
+			
+	}
+}
+
+.ellipsis {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.unpad {
+	padding: 0;
+}
+
+.hitzone {
+	cursor: pointer;
+	user-select: none;
+}
