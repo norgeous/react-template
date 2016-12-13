@@ -58,7 +58,7 @@ export class FlexGrid extends Component {
 					//console.log('>>>>>>>>>>>>',child.props, twin_props)
 					
 					if(!twin_props.style) twin_props.style = {}
-					if(twin_props.columnspread) console.log("!")
+					if(twin_props.columnspan) console.log("!")
 					twin_props.style.padding = 'calc('+gutter+' / 2 )'
 					
 					let twin = React.cloneElement(child, twin_props)
@@ -96,13 +96,13 @@ export class FlexItem extends Component {
 	render() {
 		console.log('FlexItem.js render()')
 		let me = this
-		const { store,columnspread, ...rest } = me.props
+		const { store,columnspan, ...rest } = me.props
 
 		return (
 			<div
 			className={
 				'FlexItem' +
-				me.propToCssName('columnspread')
+				me.propToCssName('columnspan')
 			}
 			{...rest}
 			>

@@ -6,8 +6,8 @@ export default class NotFoundPage extends Component {
 			<div className="page NotFoundPage text-center">
 				404 Not Found
         <hr/>
-        {window.location.href}
-			</div>
+        origin: {document.origin}
+      </div>
 		)
 	}
 }
