@@ -43,7 +43,7 @@ export default class HomeGrid extends Component {
 						<img className="responsive" src="src/public_media/common/dummy.jpg"/>
 						<div style={{background:'#222',color:'white',padding:'10px',flex:1}}>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
 					</FlexItem>
-					<FlexItem columnspan="2 md-2">
+					<FlexItem>
 						<img className="responsive" src="src/public_media/common/dummy.jpg"/>
 						<div style={{background:'#222',color:'white',padding:'10px',flex:1}}>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
 					</FlexItem>

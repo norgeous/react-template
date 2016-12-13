@@ -164,7 +164,7 @@
 	@for $i from 1 to ($cols + 1) {
 		&.columnspan-#{$size}-#{$i} {
 			width: ( $i / $cols ) * 100%;
-			border: 1px solid red;
+			//border: 1px solid red;
 		}
 	}
 
