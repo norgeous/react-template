@@ -3,6 +3,7 @@
 #### install
 ```shell
 git clone https://github.com/norgeous/react-template.git
+cd react-template
 npm i
 ```
 
